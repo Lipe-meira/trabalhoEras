@@ -1,0 +1,7 @@
+ctrl + shift + p
+compiler Path, algo assim coloca o caminho do mingw
+C:\MinGW\bin\gcc.exe
+
+cd facul-master
+gcc main.c metodos.c -o programa
+./programa
