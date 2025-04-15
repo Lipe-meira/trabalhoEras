@@ -7,14 +7,26 @@ int main() {
     int escolha;
 
     // Exemplo de uso:
-    //listaEmbarcado *listaEmbarcado = criarListaDuplamenteEncadeada();
+    listaEmbarcado *listaEmbarcado = criarListaEmbarcado();
     listaEspera *listaEspera = criarListaEspera();
 
     addFinalEspera(listaEspera,"Joao");
     addFinalEspera(listaEspera,"Maria");
     addFinalEspera(listaEspera,"Carlos");
 
-    ImprimirEspera(listaEspera);
+ 
+    embarcarPrimeiroEspera(listaEmbarcado,listaEspera);
+    embarcarPrimeiroEspera(listaEmbarcado,listaEspera);
+
+    printf("Lista embarcados:\n");
+
+    ImprimirEmbarcados(listaEmbarcado);// joao e maria
+    printf("\n");
+
+    printf("Lista espera:\n");
+    ImprimirEspera(listaEspera);// carlos
+    printf("\n");
+
 
     printf("Escolha uma opção: ");
     scanf("%d", &escolha);

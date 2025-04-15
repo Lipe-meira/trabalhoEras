@@ -43,6 +43,6 @@ void addEmbarcado(listaEmbarcado *lista, char nome[]);
 void addFinalEspera(listaEspera *lista, char nome[]);
 void ImprimirEmbarcados(const listaEmbarcado *lista);
 void ImprimirEspera(const listaEspera *lista);
-
+void embarcarPrimeiroEspera(listaEmbarcado*listaEmbarcado, listaEspera*listaEspera);
 
 #endif

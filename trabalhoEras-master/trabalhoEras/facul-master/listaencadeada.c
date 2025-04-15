@@ -57,6 +57,30 @@ void addFinalEspera(listaEspera *lista, char nome[]) {
    
 }
 
+void embarcarPrimeiroEspera(listaEmbarcado*listaEmbarcado, listaEspera*listaEspera){
+    noEspera* primeiroEspera=listaEspera->inicio;
+    noEmbarcado *noEmb = (noEmbarcado *) calloc(1, sizeof(noEmbarcado));
+    strcpy(noEmb->nome, primeiroEspera->nome);
+    if(listaEmbarcado->inicio!=NULL){
+        noEmbarcado * noTemp=listaEmbarcado->inicio;
+        while(noTemp->proximo!=NULL){
+            noTemp=noTemp->proximo;
+        }
+        noTemp->proximo=noEmb;
+        noEmb->anterior=noTemp;
+        noEmb->proximo=NULL;
+        
+    }
+    else{
+        listaEmbarcado->inicio=noEmb;
+    }
+
+    listaEspera->inicio=primeiroEspera->proximo;
+    free(primeiroEspera);
+
+    
+}
+
 
 
 void ImprimirEmbarcados(const listaEmbarcado *lista) {
@@ -64,7 +88,7 @@ void ImprimirEmbarcados(const listaEmbarcado *lista) {
 
     while (no != NULL) {
         if(no!=NULL){
-        printf("%s -> ", no->nome);
+        printf("->%s", no->nome);
     }
         no = no->proximo;
     }
@@ -78,7 +102,7 @@ void ImprimirEspera(const listaEspera *lista) {
 
     while (no != NULL) {
         if(no!=NULL){
-        printf("%s -> ", no->nome);
+        printf("->%s ", no->nome);
     }
         no = no->proximo;
     }
