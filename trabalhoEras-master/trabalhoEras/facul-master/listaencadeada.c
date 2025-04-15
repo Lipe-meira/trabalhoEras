@@ -3,7 +3,7 @@
 #include <string.h>
 #include "listaencadeada.h"
 
-listaEmbarcado *criarListaDuplamenteEncadeada() {
+listaEmbarcado *criarListaEmbarcado() {
     listaEmbarcado *lista = (listaEmbarcado *) calloc(1, sizeof(listaEmbarcado));
     lista->inicio = NULL;
     lista->fim = NULL;
@@ -11,7 +11,13 @@ listaEmbarcado *criarListaDuplamenteEncadeada() {
     return lista;
 }
 
-void addInicio(listaEmbarcado *lista, char nome[]) {
+listaEspera *criarListaEspera() {
+    listaEspera *lista = (listaEspera*) calloc(1, sizeof(listaEspera));
+    lista->inicio = NULL;
+    return lista;
+}
+
+void addEmbarcado(listaEmbarcado *lista, char nome[]) {
     noEmbarcado *no = (noEmbarcado *) calloc(1, sizeof(noEmbarcado));
     if (no != NULL) {
         strcpy(no->nome, nome);
@@ -29,30 +35,54 @@ void addInicio(listaEmbarcado *lista, char nome[]) {
     }
 }
 
-void AddFinal(listaEmbarcado *lista, char nome[]) {
-    noEmbarcado *no = (noEmbarcado *) calloc(1, sizeof(noEmbarcado));
-    if (no != NULL) {
-        strcpy(no->nome, nome);
-        no->proximo = NULL;
-        no->anterior = lista->fim;
+void addFinalEspera(listaEspera *lista, char nome[]) {
+    noEspera *no = (noEspera *) calloc(1, sizeof(noEspera));
+    
 
-        if (lista->fim != NULL) {
-            lista->fim->proximo = no;
-        } else {
-            lista->inicio = no;
-        }
+    strcpy(no->nome, nome);
+    no->proximo = NULL;
 
-        lista->fim = no;
-        lista->tamanho++;
+    if(lista->inicio==NULL){
+        lista->inicio=no;
     }
+    else{
+        noEspera *ultimoNo=lista->inicio;
+        while(ultimoNo->proximo!=NULL){
+            ultimoNo=ultimoNo->proximo;
+        }
+        ultimoNo->proximo=no;
+
+
+    }
+   
 }
 
-void Imprimir(const listaEmbarcado *lista) {
+
+
+void ImprimirEmbarcados(const listaEmbarcado *lista) {
     noEmbarcado *no = lista->inicio;
 
     while (no != NULL) {
+        if(no!=NULL){
         printf("%s -> ", no->nome);
+    }
         no = no->proximo;
     }
-    printf("NULL\n");
+    
+       
+    
+}
+
+void ImprimirEspera(const listaEspera *lista) {
+    noEspera *no = lista->inicio;
+
+    while (no != NULL) {
+        if(no!=NULL){
+        printf("%s -> ", no->nome);
+    }
+        no = no->proximo;
+    }
+    
+       
+    
 }

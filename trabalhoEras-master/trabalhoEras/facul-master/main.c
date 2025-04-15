@@ -7,17 +7,19 @@ int main() {
     int escolha;
 
     // Exemplo de uso:
-    listaEmbarcado *lista = criarListaDuplamenteEncadeada();
-    addInicio(lista, "João");
-    addInicio(lista, "Maria");
-    addInicio(lista, "Carlos");
+    //listaEmbarcado *listaEmbarcado = criarListaDuplamenteEncadeada();
+    listaEspera *listaEspera = criarListaEspera();
 
-    Imprimir(lista);
+    addFinalEspera(listaEspera,"Joao");
+    addFinalEspera(listaEspera,"Maria");
+    addFinalEspera(listaEspera,"Carlos");
+
+    ImprimirEspera(listaEspera);
 
     printf("Escolha uma opção: ");
     scanf("%d", &escolha);
 
-    switch (escolha) {
+   /* switch (escolha) {
         case 0:
             printf("Você escolheu sair do menu\n");
             break;
@@ -44,7 +46,7 @@ int main() {
 
         case 6:
             printf("Você escolheu Listar passageiros embarcados\n");
-            Imprimir(lista);
+            Imprimir(list);
             break;
 
         case 7:
@@ -62,7 +64,7 @@ int main() {
         default:
             printf("Opção inválida. Por favor, escolha uma opção válida.\n");
             break;
-    }
+    }*/
 
     return 0;
 }

@@ -37,9 +37,12 @@ typedef struct _lista_eras {
 } listaEras;
 
 // Funções
-listaEmbarcado *criarListaDuplamenteEncadeada();
-void addInicio(listaEmbarcado *lista, char nome[]);
-void AddFinal(listaEmbarcado *lista, char nome[]);
-void Imprimir(const listaEmbarcado *lista);
+listaEmbarcado *criarListaEmbarcado() ;
+listaEspera *criarListaEspera();
+void addEmbarcado(listaEmbarcado *lista, char nome[]);
+void addFinalEspera(listaEspera *lista, char nome[]);
+void ImprimirEmbarcados(const listaEmbarcado *lista);
+void ImprimirEspera(const listaEspera *lista);
+
 
 #endif
