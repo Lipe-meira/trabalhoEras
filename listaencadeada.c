@@ -164,7 +164,7 @@ void addFinalEspera(listaEspera *lista, char nome[])
 
 void embarcarPrimeiroEspera(listaEmbarcado *listaEmbarcado, listaEspera *listaEspera)
 {
-    if (!listaEspera->inicio)  // Verifica se a lista de espera está vazia
+    if (!listaEspera->inicio) 
     {
         printf("A lista de espera está vazia! Ninguém para embarcar.\n");
         return;
@@ -179,10 +179,10 @@ void embarcarPrimeiroEspera(listaEmbarcado *listaEmbarcado, listaEspera *listaEs
         return;
     }
 
-    // Copia o nome do passageiro para o novo nó de embarcado
+  
     strcpy(noEmb->nome, primeiroEspera->nome);
 
-    // Se a lista de embarcados não está vazia
+
     if (listaEmbarcado->inicio != NULL)
     {
         // Vai até o último nó de embarcados
@@ -197,7 +197,7 @@ void embarcarPrimeiroEspera(listaEmbarcado *listaEmbarcado, listaEspera *listaEs
         noEmb->anterior = noTemp;
         noEmb->proximo = NULL;
     }
-    else  // Se a lista de embarcados está vazia, o novo nó é o primeiro
+    else
     {
         listaEmbarcado->inicio = noEmb;
         listaEmbarcado->fim = noEmb;  // Também atualiza o ponteiro 'fim' se for o primeiro nó
@@ -210,10 +210,7 @@ void embarcarPrimeiroEspera(listaEmbarcado *listaEmbarcado, listaEspera *listaEs
     listaEspera->tamanho--;
     listaEmbarcado->tamanho++;
 
-    // Libera o nó removido da lista de espera
     free(primeiroEspera);
-
-    // Mensagem de sucesso
     printf("Passageiro '%s' embarcado do início da lista de espera.\n", noEmb->nome);
 }
 
