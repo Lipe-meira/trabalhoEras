@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "configurations": [
         {
             "name": "windows-clang-x86",
@@ -15,4 +16,22 @@
         }
     ],
     "version": 4
+=======
+  "configurations": [
+    {
+      "name": "windows-clang-x86",
+      "includePath": [
+        "${workspaceFolder}/**"
+      ],
+      "compilerPath": "C:/MinGW/bin/g++.exe",
+      "cStandard": "c17",
+      "cppStandard": "c++17",
+      "intelliSenseMode": "windows-clang-x86",
+      "compilerArgs": [
+        ""
+      ]
+    }
+  ],
+  "version": 4
+>>>>>>> d4424d77cc7676e4f872b114e727256d3ef96932
 }

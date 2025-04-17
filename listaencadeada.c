@@ -350,7 +350,7 @@ void removerUltimoEmbarcadoEra(listaEmbarcado *listaEmbarcado)
 {
     if (listaEmbarcado->inicio == NULL)
     {
-        printf("A lista de embarcados está vazia! Ninguém para desembarcar.\n");
+        printf("A lista de embarcados esta vazia! Ninguem para desembarcar.\n");
         return;
     }
 

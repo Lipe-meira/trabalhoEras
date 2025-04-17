@@ -60,5 +60,6 @@
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
   "files.associations": {
     "listaencadeada.h": "c"
-  }
+  },
+  "C_Cpp.errorSquiggles": "disabled"
 }
