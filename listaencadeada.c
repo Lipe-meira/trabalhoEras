@@ -219,7 +219,10 @@ void embarcarUltimoEspera(listaEmbarcado *listaEmbarcado, listaEspera *listaEspe
     if (!listaEspera->inicio)
         return;
 
+    
     noEspera *atual = listaEspera->inicio, *anterior = NULL;
+    
+    // Procura o ultimo no da lista e vai gravar no atual
     while (atual->proximo)
     {
         anterior = atual;
