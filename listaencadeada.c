@@ -467,3 +467,4 @@ void ImprimirEspera(const listaEspera *lista)
 
 
 // teste para ver se enviei certo no git
+//antes de sair de casa
