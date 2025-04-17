@@ -49,7 +49,6 @@
  void embarcarUltimoEspera(listaEmbarcado *listaEmbarcado, listaEspera *listaEspera);
  void embarcarEspecificoEspera(listaEmbarcado *listaEmbarcado, listaEspera *listaEspera, int indice);
  
-<<<<<<< HEAD
  void embarcarUltimoEspera(listaEmbarcado *listaEmbarcado, listaEspera *listaEspera);
  void removerPrimeiroEmbarcadoEra(listaEmbarcado *embarcados, const listaEras *lista);
 //  void removerPrimeiroEmbarcadoEra(listaEmbarcado *embarcados);
@@ -60,31 +59,17 @@
 
  void removeFinalEspera(listaEspera *lista);
 
-=======
- void adicionarPrimeiroEmbarcadoNaEra(listaEras *listaEras, listaEmbarcado *listaEmbarcado);
- void embarcarUltimoEspera(listaEmbarcado *listaEmbarcado, listaEspera *listaEspera);
- void adicionarUltimoEmbarcadoNaEra(listaEras *eras, listaEmbarcado *embarcados);
- void embarcarEspecificoNaEra(listaEras *eras, listaEmbarcado *embarcados, int indice);
- 
->>>>>>> d4424d77cc7676e4f872b114e727256d3ef96932
  void ImprimirEmbarcados(const listaEmbarcado *lista);
  void ImprimirEspera(const listaEspera *lista);
  void ImprimirEras(const listaEras *lista);
 
  void adicionarEra(listaEras *lista, char nome[]) ;
 
-<<<<<<< HEAD
  void selecionarEra(listaEras *eras, int escolhaEra, listaEspera *lista);
  void imprimirErasComLimite(const listaEras *lista);
 
  int temEspacoNasEras(listaEras *eras);
 
  
-=======
- void selecionarEra(listaEras *eras, int escolhaEra);
- void imprimirErasComLimite(const listaEras *lista);
-
- int temEspacoNasEras(listaEras *eras);
->>>>>>> d4424d77cc7676e4f872b114e727256d3ef96932
  
  #endif
